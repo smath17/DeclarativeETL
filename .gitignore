@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Generated files
+DDL-generated-setup.ddl
+PygramETL-generated-setup.py
+
 # C extensions
 *.so
 

@@ -1,0 +1,24 @@
+[Default]
+DBMS = "postgresSQL 15.2"
+data_warehouse_name = "test"
+pk_naming = "KEY"
+schema_type = "star"
+dimension_attribute_type = "VARCHAR(30)"
+fact_measure_type = "DECIMAL(10, 4)"
+
+[group.test.dimension.Customer]
+attributes = ["name", "address"]
+
+[group.test.dimension.Part]
+attributes = ["name", "manufacturer"]
+
+[dimension.Date]
+attributes = ["day: INT", "month: INT", "year: INT"]
+roles = ["CommitDate", "ShippingDate"]
+
+[fact.Lineorder]
+measures = ["quantity: INT", "price"]
+
+
+[group.test.fact.order]
+measures = ["quantity: INT", "price"]
